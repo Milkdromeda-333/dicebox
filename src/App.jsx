@@ -16,14 +16,12 @@ export default function App() {
     ]);
   }
 
+  const diceboxes = num.map(number => <Dicebox randomNum={number} />);
+
   return (
     <div className="container">
       <div className="dicebox--container">
-        <Dicebox randomNum={num[0]} />
-        <Dicebox randomNum={num[1]} />
-        <Dicebox randomNum={num[2]} />
-        <Dicebox randomNum={num[3]} />
-        <Dicebox randomNum={num[4]} />
+        {diceboxes}
       </div>
       <div className="button--container">
         <Button clickHandler={generateRandomNum} />
